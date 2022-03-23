@@ -18,14 +18,26 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css"
+              "../css/style.css",
+              "../lib/flaticon/font/flaticon.css",
+              "../lib/owlcarousel/assets/owl.carousel.min.css",
+              "../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
+              "https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap",
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "https://code.jquery.com/jquery-3.4.1.min.js",
+              "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js",
+              "../lib/easing/easing.min.js",
+              "../lib/owlcarousel/owl.carousel.min.js",
+              "../lib/tempusdominus/js/moment.min.js",
+              "../lib/tempusdominus/js/moment-timezone.min.js",
+              "../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+              "../mail/jqBootstrapValidation.min.js",
+              "../mail/contact.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -71,26 +83,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "styles.css"
-            ],
+            "styles": ["styles.css"],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
